@@ -13,6 +13,8 @@ module.exports = {
     filename: "[name][contenthash].js",
     /*Cleaning Up Hash files*/
     clean: true,
+    /*Adding Assests Module file name*/
+    assetModuleFilename:'[name][ext]',
   },
   /*Source Maps*/
   devtool: "source-map",
@@ -47,6 +49,11 @@ module.exports = {
           },
         },
       },
+      //Add Images or gif Loader
+      {
+        test:/\.(png|svg|jpg|jpeg|gif)$/i,
+        type:"assets/resource"
+      }
     ],
   },
   /*Html Webpack Plugin*/
