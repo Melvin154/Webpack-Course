@@ -14,6 +14,9 @@ module.exports = {
     /*Cleaning Up Hash files*/
     clean:true,
   },
+  /*Source Maps*/
+  devtool:'source-map',
+  
   /*Setting the Dev Server*/
   devServer:{
     static:{
