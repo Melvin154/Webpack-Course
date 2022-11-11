@@ -31,10 +31,12 @@ module.exports = {
   //Loaders
   module: {
     rules: [
+      //Add scss,saas,css loader
       {
         test: /\.scss$/,
         use: ["style-loader", "css-loader", "sass-loader"],
       },
+      //Add babel Loaders
       {
         test: /\.js$/,
         exclude: /node_modules/,
