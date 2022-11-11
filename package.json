@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
-   "dev": "webpack serve"
+    "dev": "webpack serve"
   },
   "keywords": [],
   "author": "",
@@ -21,6 +21,11 @@
     "webpack-core": "^0.6.9"
   },
   "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^9.1.0",
+    "babel-preset-env": "^1.7.0",
     "html-webpack-plugin": "^5.5.0",
     "webpack-dev-server": "^4.11.1"
   }

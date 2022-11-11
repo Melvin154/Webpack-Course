@@ -10,22 +10,23 @@ module.exports = {
   entry: { bundle: path.resolve(__dirname, "src/index.js") },
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: '[name][contenthash].js',
+    filename: "[name][contenthash].js",
     /*Cleaning Up Hash files*/
-    clean:true,
+    clean: true,
   },
   /*Source Maps*/
-  devtool:'source-map',
-  
+  devtool: "source-map",
+
   /*Setting the Dev Server*/
-  devServer:{
-    static:{
-      directory:path.resolve(__dirname,'dist')
-    },port:8800,
-    open:true,
-    hot:true,
-    compress:true,
-    historyApiFallback:true,
+  devServer: {
+    static: {
+      directory: path.resolve(__dirname, "dist"),
+    },
+    port: 8800,
+    open: true,
+    hot: true,
+    compress: true,
+    historyApiFallback: true,
   },
   //Loaders
   module: {
@@ -33,6 +34,16 @@ module.exports = {
       {
         test: /\.scss$/,
         use: ["style-loader", "css-loader", "sass-loader"],
+      },
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader",
+          options: {
+            presets: ["babel-preset-env"],
+          },
+        },
       },
     ],
   },
