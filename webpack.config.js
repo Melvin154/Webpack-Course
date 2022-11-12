@@ -49,7 +49,7 @@ module.exports = {
           },
         },
       },
-      //Add Images or gif Loader
+      /*Add Images or gif Loader*/
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: 'asset/resource',

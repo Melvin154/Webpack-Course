@@ -1,4 +1,15 @@
+import axios from 'axios'
+
 function generateJoke() {
-    return "Insects really bug me!!"
+  const config = {
+    headers: {
+      Accept: 'application/json',
+    },
+  }
+
+  axios.get('https://icanhazdadjoke.com', config).then((res) => {
+    document.getElementById('joke').innerHTML = res.data.joke
+  })
 }
-export default generateJoke;
+
+export default generateJoke
